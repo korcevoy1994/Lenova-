@@ -387,6 +387,8 @@
             console.log('Supabase не настроен. Используется локальное хранение.');
         }
 
+        console.log('Supabase:', supabase);
+
         // Вопросы викторины
         const questions = [
             {
@@ -636,6 +638,9 @@
                 } else {
                     showSuccess('Результат успешно сохранен!');
                 }
+
+                console.log('Сохраняем результат:', { playerName, score, totalQuestions, percentage });
+                console.log('Ответ Supabase:', data, error);
             } catch (error) {
                 console.error('Ошибка соединения с базой данных:', error);
                 showError('Ошибка соединения с базой данных');
