@@ -750,7 +750,9 @@
         }
 
         // Инициализация при загрузке страницы
-        window.onload = function() {};
+        window.onload = function() {
+            console.log('window.supabase:', window.supabase); // Должно быть не undefined!
+        };
     </script>
 </body>
 </html>
